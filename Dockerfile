@@ -6,5 +6,6 @@ RUN cd /tmp/build && mvn clean package \
 && mv target/*.jar /app.jar \        
 && cd / && rm -rf /tmp/build
 VOLUME /tmp
-EXPOSE 8080ENTRYPOINT ["java","-jar","/app.jar"]
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","/app.jar"]
 
